@@ -40,7 +40,7 @@ export function configurable<T extends object>(
 }
 ```
 
-```
+```ts
 class Stream extends configurable({ channels: 1, sampleRate: 16000 }) {
   hi() {
     console.log(this.config);
