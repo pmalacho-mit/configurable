@@ -39,3 +39,14 @@ export function configurable<T extends object>(
   return C as ConfigurableConstructor<T>;
 }
 ```
+
+```
+class Stream extends configurable({ channels: 1, sampleRate: 16000 }) {
+  hi() {
+    console.log(this.config);
+  }
+}
+
+const x = Stream.Configure.channels(1).sampleRate(48000);
+x.hi();
+```
